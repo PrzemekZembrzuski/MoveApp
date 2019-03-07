@@ -1,0 +1,11 @@
+.dropdown-content {
+    max-height: 130px;
+    overflow: auto;
+    position: relative;
+  }
+.dropdown-item:hover{
+    background-color: #0EB7F6
+  }
+.dropdown-item-active{
+      background-color: #0EB7F6
+  }

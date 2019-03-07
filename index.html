@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Move App</title>
+  <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="./node_modules//bulma-calendar/dist/css/bulma-calendar.min.css">
+  <link rel="stylesheet" href="./public/css/styles.css">
+  <link rel="stylesheet" href="./public/css/autocomplete.css">
+  <script src="./node_modules/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+  <div class="tabs">
+    <ul>
+      <li class="is-active"><a data-boxid="addDocument">Dodaj dokument</a></li>
+      <li><a data-boxid="documentList">Lista dokumentów</a></li>
+    </ul>
+  </div>
+  <div id="addDocument" class="document-box is-active-box">
+
+    <!-- file upload button -->
+    <div class="field">
+      <div class="file is-primary is-boxed">
+        <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Dodaj dokument lub przeciągnij
+            </span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <!------------------------------->
+
+    <!-- notification -->
+    <div id="notification" class="notification notify-modification"></div>
+    <!-- ------------------------------------ -->
+
+    <!-- modal -->
+    <div id="mainModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Opcje - <span id="filename"></span></p>
+        </header>
+        <section class="modal-card-body">
+
+          <!-- document number input -->
+          <div class="field">
+            <div class="control">
+              <input id="factureNumber" data-friendlyname="numer faktury" class="input is-primary" type="text"
+                placeholder="Podaj numer faktury">
+            </div>
+          </div>
+          <!-- ---------------------------->
+
+          <!-- document department input -->
+          <div class="dropdown">
+            <div class="dropdown-trigger">
+              <input id="department" data-friendlyname="oddział" class="input" type="text" placeholder="Podaj oddział"
+                aria-haspopup="true" aria-controls="autocomplete-menu-departments">
+            </div>
+            <div class="dropdown-menu" id="autocomplete-menu-departments" role="menu">
+              <div class="dropdown-content"></div>
+            </div>
+          </div>
+
+          <!-- ---------------------------- -->
+          <!-- document contractor input -->
+          <div class="dropdown">
+            <div class="dropdown-trigger">
+              <input id="contractor" data-friendlyname="kontrahenta" class="input" type="text"
+                placeholder="Podaj kontrahenta" aria-haspopup="true" aria-controls="autocomplete-menu-contractors">
+            </div>
+            <div class="dropdown-menu" id="autocomplete-menu-contractors" role="menu" >
+              <div class="dropdown-content"></div>
+            </div>
+          </div>
+          <!-- --------------------------------- -->
+          <!-- date input -->
+          <input id="date" type="date" data-friendlyname="date">
+          <!-- ---------------------------------- -->
+
+        </section>
+        <footer class="modal-card-foot">
+          <button id="mainModalSaveButton" class="button is-success">Zapisz</button>
+          <button id="mainModalCloseButton" class="button">Przerwij</button>
+        </footer>
+      </div>
+    </div>
+    <!------------------------------------->
+  </div>
+  <div id="documentList" class="document-box">
+    <h1>list</h1>
+  </div>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>

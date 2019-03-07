@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.document-box{
+    height: calc(100vh - 65px);
+    display: none;
+    justify-content: center;
+    align-items: center
+}
+.is-active-box{
+    display: flex;
+}
+/* .select{
+    max-height: 10px;
+    overflow-y: scroll;
+} */
+.notify-modification{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    transform: translateX(250%);
+    transition: transform .4s ease-in-out;
+    z-index: 50;
+}
+.notification-is-active{
+    transform: translateX(0);
+}
+.modal-card{
+    height: 70vh;
+    width: 55vw;
+}
+.modal-card-body{
+    display: flex;
+    flex-direction: column;
+}
