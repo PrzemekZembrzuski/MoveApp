@@ -3,7 +3,6 @@ const config = require('config');
 const path = require('path');
 const Notification = require('./Notification');
 const notification = new Notification();
-
 class Move {
 
     checkDir(dirPath) {
@@ -40,8 +39,8 @@ class Move {
                 if(err){
                     notification.emit('nie można przenieść do katalogu','error')
                 }
-                notification.emit('Udało się')
-                callback()
+                notification.emit('Udało się');
+                callback(newPathWithFilename)
             });
         });
     }

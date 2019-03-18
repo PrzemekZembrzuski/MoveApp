@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./node_modules//bulma-calendar/dist/css/bulma-calendar.min.css">
   <link rel="stylesheet" href="./public/css/styles.css">
   <link rel="stylesheet" href="./public/css/autocomplete.css">
+  <link rel="stylesheet" href="./public/css/list.css">
+  <link rel="stylesheet" href="./public/css/addAutocompleteTips.css">
+  <link rel="stylesheet" href="./node_modules/print-js/dist/print.css">
   <script src="./node_modules/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
@@ -18,8 +21,14 @@
     <ul>
       <li class="is-active"><a data-boxid="addDocument">Dodaj dokument</a></li>
       <li><a data-boxid="documentList">Lista dokumentów</a></li>
+      <li><a data-boxid="addAutocompleteTips">Dodaj do oddział lub kontrahenta</a></li>
+      <li><a data-boxid="utils">Narzędzia</a></li>
     </ul>
   </div>
+
+  <!-- notification -->
+  <div id="notification" class="notification notify-modification"></div>
+  <!-- ------------------------------------ -->
   <div id="addDocument" class="document-box is-active-box">
 
     <!-- file upload button -->
@@ -39,10 +48,6 @@
       </div>
     </div>
     <!------------------------------->
-
-    <!-- notification -->
-    <div id="notification" class="notification notify-modification"></div>
-    <!-- ------------------------------------ -->
 
     <!-- modal -->
     <div id="mainModal" class="modal">
@@ -80,13 +85,13 @@
               <input id="contractor" data-friendlyname="kontrahenta" class="input" type="text"
                 placeholder="Podaj kontrahenta" aria-haspopup="true" aria-controls="autocomplete-menu-contractors">
             </div>
-            <div class="dropdown-menu" id="autocomplete-menu-contractors" role="menu" >
+            <div class="dropdown-menu" id="autocomplete-menu-contractors" role="menu">
               <div class="dropdown-content"></div>
             </div>
           </div>
           <!-- --------------------------------- -->
           <!-- date input -->
-          <input id="date" type="date" data-friendlyname="date">
+          <input type="date" data-friendlyname="date">
           <!-- ---------------------------------- -->
 
         </section>
@@ -99,7 +104,40 @@
     <!------------------------------------->
   </div>
   <div id="documentList" class="document-box">
-    <h1>list</h1>
+    <div id="search">
+      <input class="input" type="text" placeholder="Text input">
+      <!-- date input -->
+      <input type="date" data-friendlyname="date">
+      <!-- ---------------------------------- -->
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="name">Nazwa</abbr></th>
+          <th><abbr title="number">Numer faktury</abbr></th>
+          <th><abbr title="department">Oddział</abbr></th>
+          <th><abbr title="contractor">Kontrahent</abbr></th>
+          <th><abbr title="date">Data</abbr></th>
+          <th><abbr title="localization">Lokalizacja pliku</abbr></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div id="addAutocompleteTips" class="document-box">
+    <input class="input" type="text" placeholder="Dodaj">
+    <div id="addButtons">
+      <button data-typename="contractors" class="button is-info">Dodaj kontrahenta</button>
+      <button data-typename="departments" class="button is-info">Dodaj oddział</button>
+    </div>
+  </div>
+  <div id="utils" class="document-box">
+    <!-- date input -->
+    <input type="date" data-friendlyname="date">
+    <!-- ---------------------------------- -->
+    <button class="button is-info">Drukuj zakres dat</button>
+  </div>
   </div>
   <script>
     // You can also require other files to run in this process

@@ -1,0 +1,16 @@
+#documentList > #search {
+    position: absolute;
+    top:0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#documentList > #search > .input[type="text"] {
+    width: 30%;
+}
+#documentList > .table{
+    position: absolute;
+    top:10%;
+    width:80%;
+}

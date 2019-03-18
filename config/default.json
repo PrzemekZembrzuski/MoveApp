@@ -1,41 +1,9 @@
 {
     "rootPath":"C:/Faktury",
+    "listFilepath": "C:/Users/Przemek/Desktop/moveApp/listitems.json",
     "dateOptions": {
         "dateFormat": "DD/MM/YYYY",
         "displayMode": "dialog"
-    },
-    "departments":[
-        "Avena 1",
-        "Avena 2",
-        "Avena 3",
-        "Avena 4",
-        "Avena 5",
-        "Avena 6",
-        "Avena 7",
-        "Avena 8",
-        "Avena 9",
-        "Avena 10",
-        "Avena 1",
-        "Avena 2",
-        "Avena 3",
-        "Avena 4",
-        "Avena 5",
-        "Avena 6",
-        "Avena 7",
-        "Avena 8",
-        "Avena 9",
-        "Avena 10"
-    ],
-    "contractors":[
-        "neuca",
-        "slawex",
-        "pgf",
-        "neuca",
-        "slawex",
-        "pgf",
-        "neuca",
-        "slawex",
-        "pgf"
-    ]
+    }
 
 }

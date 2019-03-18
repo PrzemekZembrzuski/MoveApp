@@ -9,15 +9,13 @@
     height: calc(100vh - 65px);
     display: none;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 .is-active-box{
     display: flex;
 }
-/* .select{
-    max-height: 10px;
-    overflow-y: scroll;
-} */
 .notify-modification{
     position: absolute;
     top: 10%;
@@ -29,11 +27,18 @@
 .notification-is-active{
     transform: translateX(0);
 }
-.modal-card{
-    height: 70vh;
+#mainModal > .modal-card{
+    height: 75vh;
     width: 55vw;
 }
-.modal-card-body{
+#mainModal > .modal-card > .modal-card-body{
     display: flex;
     flex-direction: column;
+    padding-top: 20px; 
+}
+#mainModal > .modal-card > .modal-card-body > * {
+    margin: 15px 0;
+}
+#utils > *{
+    margin: 20px 0;
 }

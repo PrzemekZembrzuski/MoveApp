@@ -1,28 +1,47 @@
+const editJsonFile = require("edit-json-file");
+const path = require('path');
+const config = require('config');
+const Notification = require('./Notification');
+const notification = new Notification();
+
 class Autocomplete {
-    constructor(input, tips, tipsNumber = 5) {
+    constructor(input, tipGroupName, tipsNumber = 5) {
         this.input = input;
-        this.tips = tips;
+        this.tipGroupName = tipGroupName;
+        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.tips = this.file.get(tipGroupName);
         this.tipsNumber = tipsNumber;
         this.tipsContainer = this.input.parentNode.nextElementSibling.children[0];
         this.autocompleteContainer = this.input.parentNode.parentNode;
         this.watch()
     }
+    // reload tips from file
+    reloadTips(){
+        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.tips = this.file.get(this.tipGroupName);
+    }
     // filter for tips
     filter(searchString) {
         return this.tips.filter(tip => {
-            return tip.includes(searchString)
+            return tip.toLowerCase().includes(searchString.toLowerCase())
         }).slice(0, this.tipsNumber)
     }
     //open autocomplete
     open() {
         if (!this.autocompleteContainer.classList.contains('is-active')) {
-            this.autocompleteContainer.classList.add('is-active')
+            this.input.focus()
+            this.reloadTips();
+            this.autocompleteContainer.classList.add('is-active');
         }
     }
     //close autocomplete
     close() {
         if (this.autocompleteContainer.classList.contains('is-active')) {
             this.autocompleteContainer.classList.remove('is-active');
+            if(!this.tips.includes(this.input.value)){
+                notification.emit('Podaj poprawną wartość ze słownika','error')
+                this.input.value = '';
+            }
             this.reset()
         }
     }
@@ -64,11 +83,12 @@ class Autocomplete {
     // set item of menu active
     setActiveMenuItem(element) {
         [...this.tipsContainer.children].forEach(item => item.classList.remove('dropdown-item-active'));
-        element.classList.add('dropdown-item-active')
+        element.classList.add('dropdown-item-active');
+        this.scroll();
     }
     //scroll tips container
     scroll() {
-        this.tipsContainer.scrollTop = this.getActiveTip().offsetTop;
+        this.tipsContainer.scrollTop = this.getActiveTip().offsetTop
     }
     //keyboard controll
     keyboardControl(key) {
@@ -76,15 +96,13 @@ class Autocomplete {
         const firstElement = !this.getActiveTip().previousElementSibling;
         if (key === 38 && !firstElement) {
             this.setActiveMenuItem(this.getActiveTip().previousElementSibling);
-            this.scroll()
         }
         if (key === 40 && !lastElement) {
             this.setActiveMenuItem(this.getActiveTip().nextElementSibling);
-            this.scroll();
         }
         if (key === 13) {
             const value = this.getActiveTip().children[0].innerText;
-            this.input.value = value;
+            this.setValue(value)
             this.close()
         }
 
@@ -99,8 +117,11 @@ class Autocomplete {
                 this.close()
             }
         })
+        this.input.addEventListener('blur',e=>{
+            setTimeout(()=>this.close(),200)
+        })
         this.tipsContainer.addEventListener('click', e => {
-            if (e.target.nodeName === 'P' && e.target.parentElement.classList.contains('dropdown-item')) {
+            if ((e.target.nodeName === 'P' && e.target.parentElement.classList.contains('dropdown-item')) || (e.target.nodeName === 'DIV' && e.target.classList.contains('dropdown-item'))) {
                 this.setValue(e.target.innerText)
                 this.close()
             }

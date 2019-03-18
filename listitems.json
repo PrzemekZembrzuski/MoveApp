@@ -1,0 +1,210 @@
+{
+  "departments": [
+    "Avena 1",
+    "Avena 2",
+    "Avena 3",
+    "Avena 4",
+    "Avena 5",
+    "Avena 6",
+    "Avena 7",
+    "Avena 8",
+    "Avena 9",
+    "Avena 10",
+    "Avena 1",
+    "Avena 2",
+    "Avena 3",
+    "Avena 4",
+    "Avena 5",
+    "Avena 6",
+    "Avena 7",
+    "Avena 8",
+    "Avena 9",
+    "Avena 10"
+  ],
+  "contractors": [
+    "yului",
+    "rerererer",
+    "neuca",
+    "slawex",
+    "pgf",
+    "neuca",
+    "slawex",
+    "pgf",
+    "neuca",
+    "slawex",
+    "pgf"
+  ],
+  "list": [
+    {
+      "id": "18",
+      "filename": "asdasd.pdf",
+      "factureNumber": "NowyDokument",
+      "department": "Avena 1",
+      "contractor": "slawex",
+      "date": "12/04/2019",
+      "filepath": "C:\\Faktury\\Avena 1\\slawex\\2019\\04\\12\\asdasd.pdf"
+    },
+    {
+      "id": "17",
+      "filename": "fiuku.pdf",
+      "factureNumber": "fiuku",
+      "department": "fdgdf",
+      "contractor": "gdgdg",
+      "date": "29/03/2019",
+      "filepath": "C:\\Faktury\\fdgdf\\gdgdg\\2019\\03\\29\\fiuku.pdf"
+    },
+    {
+      "id": "16",
+      "filename": "lula.pdf",
+      "factureNumber": "lula",
+      "department": "lula",
+      "contractor": "lula",
+      "date": "02/01/2019",
+      "filepath": "C:\\Faktury\\lula\\lula\\2019\\01\\02\\lula.pdf"
+    },
+    {
+      "id": "15",
+      "filename": "pikachu.pdf",
+      "factureNumber": "sdfsdf",
+      "department": "sdfsdf",
+      "contractor": "sdf",
+      "date": "22/03/2019",
+      "filepath": "C:\\Faktury\\sdfsdf\\sdf\\2019\\03\\22\\pikachu.pdf"
+    },
+    {
+      "id": "14",
+      "filename": "jarek.pdf",
+      "factureNumber": "jrek",
+      "department": "jakwe",
+      "contractor": "saksd",
+      "date": "16/03/2019",
+      "filepath": "C:\\Faktury\\jakwe\\saksd\\2019\\03\\16\\jarek.pdf"
+    },
+    {
+      "id": "13",
+      "filename": "przemek.pdf",
+      "factureNumber": "przemek",
+      "department": "Avena 1",
+      "contractor": "slawex",
+      "date": "16/03/2019",
+      "filepath": "C:\\Faktury\\Avena 1\\slawex\\2019\\03\\16\\przemek.pdf"
+    },
+    {
+      "id": "12",
+      "filename": "dupa.pdf",
+      "factureNumber": "asdasdasdsadreer",
+      "department": "ssd3245",
+      "contractor": "234234",
+      "date": "21/03/2019",
+      "filepath": "C:\\Faktury\\ssd3245\\234234\\2019\\03\\21\\dupa.pdf"
+    },
+    {
+      "id": "11",
+      "filename": "erer.pdf",
+      "factureNumber": "asda",
+      "department": "sdas",
+      "contractor": "dad",
+      "date": "16/03/2019",
+      "filepath": "C:\\Faktury\\sdas\\dad\\2019\\03\\16\\erer.pdf"
+    },
+    {
+      "id": "10",
+      "filename": "ererere.pdf",
+      "factureNumber": "asd",
+      "department": "asd",
+      "contractor": "asd",
+      "date": "04/04/2019",
+      "filepath": "C:\\Faktury\\asd\\asd\\2019\\04\\04\\ererere.pdf"
+    },
+    {
+      "id": "9",
+      "filename": "kubabubaduda.pdf",
+      "factureNumber": "rtyewq",
+      "department": "Avena 2",
+      "contractor": "neuca",
+      "date": "25/02/2019",
+      "filepath": "C:\\Faktury\\Avena 2\\neuca\\2019\\02\\25\\kubabubaduda.pdf"
+    },
+    {
+      "id": "8",
+      "filename": "rrrr.pdf",
+      "factureNumber": "rrrrr",
+      "department": "rrrr",
+      "contractor": "rrrr",
+      "date": "06/04/2019",
+      "filepath": "C:\\Faktury\\rrrr\\rrrr\\2019\\04\\06\\rrrr.pdf"
+    },
+    {
+      "id": "7",
+      "filename": "kuba.pdf",
+      "factureNumber": "kuba",
+      "department": "Avena 1",
+      "contractor": "neuca",
+      "date": "05/04/2019",
+      "filepath": "C:\\Faktury\\Avena 1\\neuca\\2019\\04\\05\\kuba.pdf"
+    },
+    {
+      "id": "6",
+      "filename": "1 — kopia.pdf",
+      "factureNumber": "asd",
+      "department": "asd",
+      "contractor": "asd",
+      "date": "13/03/2019",
+      "filepath": "C:\\Faktury\\asd\\asd\\2019\\03\\13\\1 — kopia.pdf"
+    },
+    {
+      "id": "5",
+      "filename": "1 — kopia (6).pdf",
+      "factureNumber": "asd",
+      "department": "Avena 10",
+      "contractor": "neuca",
+      "date": "06/04/2019",
+      "filepath": "C:\\Faktury\\Avena 10\\neuca\\2019\\04\\06\\1 — kopia (6).pdf"
+    },
+    {
+      "id": "4",
+      "filename": "1 — kopia (5).pdf",
+      "factureNumber": "21321",
+      "department": "Avena 1",
+      "contractor": "neuca",
+      "date": "29/03/2019",
+      "filepath": "C:\\Faktury\\Avena 1\\neuca\\2019\\03\\29\\1 — kopia (5).pdf"
+    },
+    {
+      "id": "3",
+      "filename": "1.pdf",
+      "factureNumber": "p[87ohgjg",
+      "department": "Avena 2",
+      "contractor": "neuca",
+      "date": "15/03/2019",
+      "filepath": "C:\\Faktury\\Avena 2\\neuca\\2019\\03\\15\\1.pdf"
+    },
+    {
+      "id": "2",
+      "filename": "1 — kopia (4).pdf",
+      "factureNumber": "ew34tgf4/34",
+      "department": "Avena 2",
+      "contractor": "slawex",
+      "date": "06/03/2019",
+      "filepath": "C:\\Faktury\\Avena 2\\slawex\\2019\\03\\06\\1 — kopia (4).pdf"
+    },
+    {
+      "id": "1",
+      "filename": "1 — kopia (3).pdf",
+      "factureNumber": "54rtrd",
+      "department": "Avena 10",
+      "contractor": "neuca",
+      "date": "13/03/2019",
+      "filepath": "C:\\Faktury\\Avena 10\\neuca\\2019\\03\\13\\1 — kopia (3).pdf"
+    },
+    {
+      "id": "0",
+      "filename": "1 — kopia (2).pdf",
+      "factureNumber": "121",
+      "department": "Avena 2",
+      "contractor": "slawex",
+      "date": "20/03/2019",
+      "filepath": "C:\\Faktury\\Avena 2\\slawex\\2019\\03\\20\\1 — kopia (2).pdf"
+    }
+  ]
+}

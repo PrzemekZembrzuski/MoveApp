@@ -4,15 +4,9 @@ const Modal = require('./Modal');
 
 // get all data for open modal
 const modalBox = document.querySelector('#mainModal');
-const saveButton = document.querySelector('#mainModalSaveButton');
-const closeButton = document.querySelector('#mainModalCloseButton');
-const dateInput = document.querySelector('#date');
-const factureNumberInput = document.querySelector('#factureNumber');
-const departmentInput = document.querySelector('#department');
-const contractorNameInput = document.querySelector('#contractor'); 
-const filenameBox = document.querySelector('#filename');
+
 // create modal object
-const modal = new Modal(modalBox,saveButton,closeButton,filenameBox,[factureNumberInput,departmentInput,contractorNameInput,dateInput]);
+const modal = new Modal(modalBox);
 
 
 class DropFile{
@@ -40,7 +34,7 @@ class DropFile{
         this.dropBox.addEventListener('drop',e=>{
             this.checkFileType(e.dataTransfer.files[0],()=>{
                 modal.setFilePath = e.dataTransfer.files[0].path;
-                modal.setFileName = e.dataTransfer.file[0].name;
+                modal.setFileName = e.dataTransfer.files[0].name;
                 modal.show();
                 modal.showFilename(e.dataTransfer.files[0].name);
                 
