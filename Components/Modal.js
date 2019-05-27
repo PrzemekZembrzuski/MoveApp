@@ -15,7 +15,7 @@ const list = new List();
 
 class Modal {
     constructor(modalBox) {
-        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.file = editJsonFile(config.get('listFilepath'));
         this.modalBox = modalBox;
         this.saveButton = document.querySelector('#mainModalSaveButton');
         this.closeButton = document.querySelector('#mainModalCloseButton');

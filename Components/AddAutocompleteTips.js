@@ -6,7 +6,7 @@ const notification = new Notification();
 
 class AddAutocompleteTips{
     constructor(){
-        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.file = editJsonFile(config.get('listFilepath'));
         this.buttonsContainer = document.querySelector('#addAutocompleteTips > #addButtons');
         this.input = document.querySelector('#addAutocompleteTips > input');
         this.watch();

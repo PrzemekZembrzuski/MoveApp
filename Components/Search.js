@@ -6,7 +6,7 @@ const config = require('config');
 class Search {
     constructor(input) {
         this.input = input;
-        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.file = editJsonFile(config.get('listFilepath'));
         this.idx = this.createIndexes();
         this.filterDate;
         this.inputValue;

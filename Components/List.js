@@ -7,7 +7,7 @@ const Open = require('./Open');
 
 class List {
     constructor() {
-        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.file = editJsonFile(config.get('listFilepath'));
         this.table = document.querySelector('#documentList > table');
         this.tableBody = this.table.children[1];
         this.input = document.querySelector('#search > input[type="text"]');

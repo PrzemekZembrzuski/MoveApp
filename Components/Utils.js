@@ -12,7 +12,7 @@ const notification = new Notification();
 
 class Utils {
     constructor() {
-        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.file = editJsonFile(config.get('listFilepath'));
         this.date = new Date();
         this.startDate = new Date(this.date.getFullYear(), this.date.getMonth() - 1, 1);
         this.endDate = new Date(this.date.getFullYear(), this.date.getMonth() - 1, new Date(this.date.getFullYear(), this.date.getMonth(), 0).getDate())

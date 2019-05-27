@@ -8,7 +8,7 @@ class Autocomplete {
     constructor(input, tipGroupName, tipsNumber = 5) {
         this.input = input;
         this.tipGroupName = tipGroupName;
-        this.file = editJsonFile(path.resolve(config.get('listFilepath')));
+        this.file = editJsonFile(config.get('listFilepath'));
         this.tips = this.file.get(tipGroupName);
         this.tipsNumber = tipsNumber;
         this.tipsContainer = this.input.parentNode.nextElementSibling.children[0];

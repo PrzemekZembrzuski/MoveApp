@@ -1,6 +1,8 @@
 const Notification = require('./Notification');
 const notification = new Notification();
 const Modal = require('./Modal');
+const config = require('config')
+
 
 // get all data for open modal
 const modalBox = document.querySelector('#mainModal');
@@ -15,10 +17,10 @@ class DropFile{
         this.input = document.querySelector('.file-input');
     }
     checkFileType(file,callback){
-        if(file.type === 'application/pdf'){
+        if(config.get('fileTypes').includes(file.type)){
             callback()
         }else{
-            notification.emit('zły plik, podaj plik pdf','error')
+            notification.emit('zły plik, podaj plik pdf lub xml','error')
         }
     }
 

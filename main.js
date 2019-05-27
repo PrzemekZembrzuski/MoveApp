@@ -1,9 +1,21 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, globalShortcut } = require('electron')
+const path = require('path')
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+
+//set production env
+process.env["NODE_ENV"] = 'production'
+
+// change loaction of CONFIG file if production 
+if(process.env["NODE_ENV"] === 'production'){
+  process.env["NODE_CONFIG_DIR"] = path.join(process.env.PORTABLE_EXECUTABLE_DIR,'config')
+}
+
+console.log(path.dirname(app.getPath('exe')))
 
 function createWindow () {
   // Create the browser window.

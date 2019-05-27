@@ -1,6 +1,6 @@
 const path = require('path');
-// process.env["NODE_CONFIG_DIR"] = path.resolve(__dirname,'../config');
-const index = require('./index')
+const index = require('./index');
+
 
 index()
 document.querySelector('.tabs').addEventListener('click', e => {
