@@ -17,11 +17,12 @@ class DropFile{
         this.input = document.querySelector('.file-input');
     }
     checkFileType(file,callback){
-        if(config.get('fileTypes').includes(file.type)){
-            callback()
-        }else{
-            notification.emit('zły plik, podaj plik pdf lub xml','error')
-        }
+        // if(config.get('fileTypes').includes(file.type)){
+        //     callback()
+        // }else{
+        //     notification.emit('zły plik, podaj plik pdf lub xml','error')
+        // }
+        callback()
     }
 
     watch(){

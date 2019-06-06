@@ -15,6 +15,9 @@ if(process.env["NODE_ENV"] === 'production'){
   process.env["NODE_CONFIG_DIR"] = path.join(process.env.PORTABLE_EXECUTABLE_DIR,'config')
 }
 
+if(process.env["NODE_ENV"] === 'development'){
+  process.env["NODE_CONFIG_DIR"] = path.join(path.dirname,'config')
+}
 console.log(path.dirname(app.getPath('exe')))
 
 function createWindow () {

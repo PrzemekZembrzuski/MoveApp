@@ -1,0 +1,10 @@
+{
+    "rootPath":"C:/Faktury",
+    "listFilepath": "C:/Users/Przemek/Desktop/MoveApp/listitems.json",
+    "dateOptions": {
+        "dateFormat": "DD/MM/YYYY",
+        "displayMode": "dialog"
+    },
+    "fileTypes":["application/pdf","text/xml","application/xml"]
+
+}
